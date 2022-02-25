@@ -1,31 +1,34 @@
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import styles from '../styles/Home.module.css';
-import { AnimationSlider } from './commons/components/templates';
-import { MainContextProvider } from './commons/services/contexts/MainContext';
+import {AnimationSlider, MyCustomer, MyIssue} from './commons/components/templates';
+import {MainContextProvider} from './commons/services/contexts/MainContext';
+import GroupHandlerButton from "./commons/components/molecules/GroupHandlerButton/GroupHandlerButton";
+import {Container} from "@mui/material";
+import {Loading} from "./commons/components/organism";
+import {LogoMotion} from "./commons/components/molecules";
 
 export default function Home() {
-  return (
-    <MainContextProvider>
-      <AnimationSlider />
-    </MainContextProvider>
-  );
-}
+    const [isShowAnim , setIsShowAnim] = useState({
+        slider : true,
+        customer : false
+    })
+    return (
+        <MainContextProvider>
+            {/*<Loading />*/}
 
-{
-  /* <img src="/assets/glasses inner.svg" /> */
-  /* <SliderContainer>
-    <Forground /> 
-    <Background>
-      <img src="/assets/glasses outer.svg" />
-    </Background>
-    <GlassesContainer>
-      <SqureGlasses>
-        <Image>
-          <ImageStyle />
-        </Image>
-      </SqureGlasses>
-      <CircleGlasses></CircleGlasses>
-    </GlassesContainer>
-  </SliderContainer>; */
+            <LogoMotion/>
+
+            <AnimationSlider
+                    isAnim={isShowAnim}
+                    setAnim={setIsShowAnim}
+                    // onClick={()=> setIsShowAnim({...isShowAnim , slider: })}
+                />
+                <MyCustomer/>
+                <MyIssue />
+
+                <GroupHandlerButton  />
+
+        </MainContextProvider>
+    );
 }

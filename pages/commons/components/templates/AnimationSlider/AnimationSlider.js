@@ -1,78 +1,133 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect, useContext} from 'react';
 import {
-  Background,
-  SliderContainer,
-  SqureGlasses,
-  GlassesContainer,
-  CircleGlasses,
-  // is new
-  MainContainer,
-  MainEye,
-  Loupe,
-  Body,
-  MainContainerLoupe,
-  Squre,
-  MainContainerSqure,
+    Body,
+    Squre,
+    MainContainerSqure,
+    LeftHalf,
 } from './style';
 import {
-  useWindowDimensions,
-  useMousePosiotn,
+    useWindowDimensions,
 } from '../../../services/hooks/hook';
-import { ThemeProvider } from 'styled-components';
-import Image from 'next/image';
-import { Loading, ShapeAnim } from '../../organism';
-export default function AnimationSlider() {
-  const { height, width } = useWindowDimensions();
-  const { x, y } = useMousePosiotn();
+import {ThemeProvider} from 'styled-components';
+import {MainContextStore} from "../../../services/contexts/MainContext";
+import BackgroundGlouther from "./BackgroundGlouther";
+import {motion} from 'framer-motion'
+import Forground from "./Forground";
 
-  let scale = 1;
+export default function AnimationSlider({isAnim, setAnim}) {
+    const {height, width} = useWindowDimensions();
+    const {state, dispatch} = useContext(MainContextStore)
+    const [arrSplash, setArrSplash] = useState([])
 
-  function calScale() {
-    if (resize.width > resize.height) {
-      if (resize.height < 300) {
-        scale = 0.8;
-      } else {
-        scale = 1.01;
-      }
+    function convertPXToVW(px) {
+        return px * (100 / width);
     }
-  }
 
-  function handleScale() {}
+    const theme = {
+        mainSlider: {
+            width: width ? width+"px" : '100vw',
+            height: height,
+            // left: x - 150,
+            // top: y - 150,
+            left: 0,
+            top: 0,
+            loupeLeft: 7 + convertPXToVW(550),
+            backgroundPosition: 150 + 'px ' + 150 + 'px',
+        },
+    };
 
-  function convertPXToVW(px) {
-    return px * (100 / width);
-  }
+    useEffect(() => {
+        _renderSlash()
+    }, [])
 
-  const theme = {
-    mainSlider: {
-      width: width,
-      height: height,
-      // left: x - 150,
-      // top: y - 150,
-      left: 0,
-      top: 0,
-      loupeLeft: 7 + convertPXToVW(550),
-      backgroundPosition: 150 + 'px ' + 150 + 'px',
-    },
-  };
+    function _renderSlash() {
+        let splashClone = [...arrSplash]
+        let i;
+        for (i = 0; i < 20; i++) {
+            splashClone.push(
+                <Squre style={{left: (i * 25) + "px"}}>
+                    <MainContainerSqure>{/* <MainForground /> */}</MainContainerSqure>
+                </Squre>
+            )
+        }
+        setArrSplash(splashClone)
+    }
 
-  return (
-    <ThemeProvider theme={theme}>
-      <Body>
-        {/* <Loading id="loading" /> */}
-        <MainContainer id="main-container">
-          {/* <MainForground /> */}
-        </MainContainer>
-        <MainEye>
-          <Squre>
-            <ShapeAnim />
-            <MainContainerSqure>{/* <MainForground /> */}</MainContainerSqure>
-          </Squre>
-          <Loupe>
-            <MainContainerLoupe>{/* <MainForground /> */}</MainContainerLoupe>
-          </Loupe>
-        </MainEye>
-      </Body>
-    </ThemeProvider>
-  );
+
+    return (
+        <ThemeProvider theme={theme}>
+            <Body
+                animate={{
+                    // y: state.pageActive === 0 ? 0 : 400,
+                    opacity: state.pageActive === 0 ? 1 : 0,
+                    zIndex: state.pageActive === 0 ? 9 : -1
+                }}
+                transition={{
+                    type: 'spring',
+                    stiffness: 60
+                }}
+                initial={{
+opacity : 0
+                    // y: state.pageActive === 0 ? 400 : 0
+                }}
+            >
+                <div id={"main-background-this"}>
+                    <BackgroundGlouther/>
+                    <BackgroundGlouther/>
+                    <BackgroundGlouther/>
+                    <BackgroundGlouther/>
+                    <BackgroundGlouther/>
+                </div>
+
+
+
+                <LeftHalf>
+                    <Forground/>
+                </LeftHalf>
+
+            </Body>
+
+            {/*    <motion.div*/}
+            {/*        className={"bodyShadow"}*/}
+            {/*        animate={{*/}
+            {/*            y: state.pageActive === 0 ? 0 : 400,*/}
+            {/*            opacity: state.pageActive === 0 ? 1 : 0,*/}
+            {/*            zIndex: state.pageActive === 0 ? 9 : -1*/}
+            {/*        }}*/}
+            {/*        transition={{*/}
+            {/*            type: 'spring',*/}
+            {/*            stiffness: 60*/}
+            {/*        }}*/}
+            {/*        initial={{*/}
+            {/*            y: state.pageActive === 0 ? 400 : 0*/}
+            {/*        }}*/}
+            {/*    >*/}
+
+
+            {/*        /!*<Loading id="loading"/>*!/*/}
+            {/*        <MainContainer id="main-container">*/}
+            {/*            /!* <MainForground /> *!/*/}
+            {/*        </MainContainer>*/}
+
+            {/*        <MainEye>*/}
+            {/*            <Squre>*/}
+            {/*                <ShapeAnim/>*/}
+            {/*                <MainContainerSqure>/!* <MainForground /> *!/</MainContainerSqure>*/}
+            {/*            </Squre>*/}
+
+            {/*            /!*<Loupe>*!/*/}
+            {/*            /!*    <ShapeAnim/>*!/*/}
+            {/*            /!*    <MainContainerLoupe>/!* <MainForground /> *!/</MainContainerLoupe>*!/*/}
+            {/*            /!*</Loupe>*!/*/}
+            {/*        </MainEye>*/}
+
+            {/*        /!*<TowCar/>*!/*/}
+
+            {/*        /!*<GroupHandlerButton/>*!/*/}
+            {/*    </motion.div>*/}
+            {/*</Body>*/}
+
+
+        </ThemeProvider>
+    );
 }

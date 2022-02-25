@@ -6,8 +6,8 @@ const useWindowDimensions = () => {
   const hasWindow = typeof window !== 'undefined';
   const { state, dispatch } = useContext(MainContextStore);
   function getWindowDimensions() {
-    const width = hasWindow ? window.innerWidth : null;
-    const height = hasWindow ? window.innerHeight : null;
+    const width = hasWindow ? document.getElementById("main-background-this").offsetWidth : null;
+    const height = hasWindow ? document.getElementById("main-background-this").offsetHeight : null;
     return {
       width,
       height,
