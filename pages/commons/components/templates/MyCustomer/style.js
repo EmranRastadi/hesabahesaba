@@ -18,6 +18,10 @@ const Main = styled.div`
     row-gap: 15px;
   }
   
+  
+  
+  
+  
   .animationContainer{
     width: 100%;
     height: 100vh;

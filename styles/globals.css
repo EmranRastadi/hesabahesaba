@@ -1,44 +1,111 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 
-  font-family: iran-sans , -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: iran-sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
-  font-family: "iran-sans";
+    box-sizing: border-box;
+    font-family: "iran-sans";
 }
-input{
-  font-family: "iran-sans" !important;
+
+input {
+    font-family: "iran-sans" !important;
+    color: #fff !important;
 }
-input::placeholder{
-  font-family: "iran-sans" !important;
+
+input::placeholder {
+    font-family: "iran-sans" !important;
 }
-label{
-  font-family: "iran-sans" !important;
+
+label {
+    font-family: "iran-sans" !important;
+    color: #ccc !important;
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: hsla(0, 0%, 100%, .7);
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline
+ {
+    border-color: hsla(0,0%,100%,.7);
+
+}
+.MuiOutlinedInput-input
+ {
+    color: hsla(0,0%,100%,.7);
+
+}
+ .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input{
+    color: hsla(0,0%,100%,.7);
+
+}
+.MuiInputLabel-outlined {
+    color: hsla(0,0%,100%,.7);
+}
+.MuiInputLabel-outlined.Mui-focused {
+    color: hsla(0,0%,100%,.7)
+
+}
+
+textarea{
+    resize: none;
+    background : none;
+    color : #fff;
+    padding : 10px;
+    font-size: 16px;
+    outline: none;
+    border-width: 1px;
+    border-color: #cccccc;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+textarea::placeholder{
+    color: #ccc;
+}
+
+button {
+    font-family: 'iran-sans' !important; ;
+}
+span     {
+    font-family: 'iran-sans' !important; ;
+}
+
+input#contained-button-file{
+    display: none !important;
+}
+textarea:focus{
+    border-color: green;
+}
+textarea:hover{
+    border-color: #000;
 }
 @font-face {
-  font-family: "dubai";
-  src: url("/fonts/dubai-400.ttf");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
+    font-family: "dubai";
+    src: url("/fonts/dubai-400.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
 }
+
 @font-face {
-  font-family: "iran-sans";
-  src: url("/fonts/iran-sans-400.ttf");
-  font-style: medium;
-  font-weight: 500;
-  font-display: swap;
+    font-family: "iran-sans";
+    src: url("/fonts/iran-sans-400.ttf");
+    font-style: medium;
+    font-weight: 500;
+    font-display: swap;
 }
