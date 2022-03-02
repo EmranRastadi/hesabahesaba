@@ -72,19 +72,19 @@ export default function MyCustomer() {
     return (
             <Main>
                 <motion.div
-                    animate={{
-                        // y: state.pageActive === 1 ? 0 : 400,
-                        opacity: state.pageActive === 1 ? 1 : 0,
-                        zIndex: state.pageActive === 1 ? 9 : -1,
-                    }}
-                    transition={{
-                        type: 'spring',
-                        stiffness: 60
-                    }}
-                    initial={{
-                        // y: state.pageActive === 1 ? 400 : 0
-                        opacity :0
-                    }}
+                    // animate={{
+                    //     // y: state.pageActive === 1 ? 0 : 400,
+                    //     opacity: state.pageActive === 1 ? 1 : 0,
+                    //     zIndex: state.pageActive === 1 ? 9 : -1,
+                    // }}
+                    // transition={{
+                    //     type: 'spring',
+                    //     stiffness: 60
+                    // }}
+                    // initial={{
+                    //     // y: state.pageActive === 1 ? 400 : 0
+                    //     opacity :0
+                    // }}
                     className={"luncher"}
                 >
 

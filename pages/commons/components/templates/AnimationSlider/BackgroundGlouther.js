@@ -1,12 +1,13 @@
 import {motion} from "framer-motion";
+// import gasp from 'gsap/all';
+export default function BackgroundGlouther({realHeight, realWidth}) {
 
-export default function BackgroundGlouther({realHeight , realWidth}) {
     return (
         <svg
-           id={"background-main"}
-           style={{float : 'left'}}
+            id={"background-main"}
+            style={{float: 'left'}}
             xmlns="http://www.w3.org/2000/svg" height="100vh"
-             viewBox="0 0 6720 1080">
+            viewBox="0 0 6720 1080">
             <defs>
                 <linearGradient id="linear-gradient" x1="3360.23" y1="1080" x2="3360.23" gradientUnits="userSpaceOnUse">
                     <stop offset="0" stopColor="#f0d9c5"/>
@@ -2271,19 +2272,19 @@ export default function BackgroundGlouther({realHeight , realWidth}) {
 
 
                         <motion.g
-                         animate={{
-                             y : ["-10px","0px"],
-                             scale : 1.08
-                         }}
-                         transition={{
-                             type : 'spring',
-                             stiffness : 60,
-                             repeat : Infinity,
-                         }}
-                         initial={{
-                             y : "0px",
-                             scale : 0.98
-                         }}
+                            animate={{
+                                y: ["-10px", "0px"],
+                                scale: 1.08
+                            }}
+                            transition={{
+                                type: 'spring',
+                                stiffness: 60,
+                                repeat: Infinity,
+                            }}
+                            initial={{
+                                y: "0px",
+                                scale: 0.98
+                            }}
                             id={"oilFire"}>
                             <path
                                 d="M2501,393.52s-8.8-10.26,2.93-17.59c0,0,1.47-1.47,0-5.87,0,0,1.47-1.46,4.4,1.47,0,0,4.4-8.8-2.93-11.73,0,0,8.8-4.4,11.73,7.33,2.71,10.83,8.8,16.13,5.87,23.46S2506.88,399.39,2501,393.52Z"
@@ -2311,28 +2312,28 @@ export default function BackgroundGlouther({realHeight , realWidth}) {
                               strokeMiterlimit="10" strokeWidth="2"/>
                         <ellipse cx="2434.77" cy="469.11" rx="9.53" ry="0.73" fill="none" stroke="#140a2d"
                                  strokeMiterlimit="10" strokeWidth="2"/>
-                       <motion.g
-                           animate={{
-                               y : ["-10px","0px"],
-                               scale : 1.08
-                           }}
-                           transition={{
-                               type : 'spring',
-                               stiffness : 60,
-                               repeat : Infinity,
-                           }}
-                           initial={{
-                               y : "0px",
-                               scale : 0.98
-                           }}
-                       >
-                           <path
-                               d="M2450.71,366.26s-6.05-7.05,2-12.09c0,0,1-1,0-4,0,0,1-1,3,1,0,0,3-6-2-8.06,0,0,6.05-3,8.06,5,1.86,7.45,6.05,11.09,4,16.12S2454.74,370.29,2450.71,366.26Z"
-                               fill="#e86523"/>
-                           <path
-                               d="M2453.06,361.91c.25-2.32,1.69-5.53,6.18-9.41a7.41,7.41,0,0,0,1.07,8.55c2.37,2.62,1,5.27-1.52,6A4.65,4.65,0,0,1,2453.06,361.91Z"
-                               fill="#f4bd6c"/>
-                       </motion.g>
+                        <motion.g
+                            animate={{
+                                y: ["-10px", "0px"],
+                                scale: 1.08
+                            }}
+                            transition={{
+                                type: 'spring',
+                                stiffness: 60,
+                                repeat: Infinity,
+                            }}
+                            initial={{
+                                y: "0px",
+                                scale: 0.98
+                            }}
+                        >
+                            <path
+                                d="M2450.71,366.26s-6.05-7.05,2-12.09c0,0,1-1,0-4,0,0,1-1,3,1,0,0,3-6-2-8.06,0,0,6.05-3,8.06,5,1.86,7.45,6.05,11.09,4,16.12S2454.74,370.29,2450.71,366.26Z"
+                                fill="#e86523"/>
+                            <path
+                                d="M2453.06,361.91c.25-2.32,1.69-5.53,6.18-9.41a7.41,7.41,0,0,0,1.07,8.55c2.37,2.62,1,5.27-1.52,6A4.65,4.65,0,0,1,2453.06,361.91Z"
+                                fill="#f4bd6c"/>
+                        </motion.g>
                         <path d="M2413,491.1l.47-21.26s20.53-20.53,44,0V491.1Z" fill="#30214a" stroke="#140a2d"
                               strokeMiterlimit="10" strokeWidth="2"/>
                         <path
@@ -3207,23 +3208,27 @@ export default function BackgroundGlouther({realHeight , realWidth}) {
 
 
                     <g id="car_accident" data-name="car accident">
-                        <motion.g id={"right-car-accident"}
-                                  animate={{
-                                      x: '0px'
-                                  }}
-                                  transition={{
-                                      type: 'spring',
-                                      delay: 1,
-                                      stiffness: 60,
-                                      default: {
-                                          duration: 3,
-                                      }
-                                      // dum
-                                  }}
-                                  initial={{
-                                      y: '-30px',
-                                      x: '350px'
-                                  }}
+                        <g id={"right-car-accident"}
+                                  // animate={{
+                                  //     x: 0
+                                  // }}
+                                  // transition={{
+                                  //     type: 'spring',
+                                  //     stiffness: 60,
+                                  //     repeat: Infinity,
+                                  //     repeatType : 'loop',
+                                  //     repeatDelay: 5,
+                                  //     default: {
+                                  //         repeat : Infinity,
+                                  //         repeatDelay : 5,
+                                  //         duration: 3,
+                                  //     }
+                                  //     // dum
+                                  // }}
+                                  // initial={{
+                                  //     y: '-30px',
+                                  //     x: '350px'
+                                  // }}
                         >
                             <path
                                 d="M624.8,907.34H732.34a8.49,8.49,0,0,0,8.49-8.48v-8.49H654.54a34.53,34.53,0,0,0-29.74,17Z"
@@ -3249,16 +3254,20 @@ export default function BackgroundGlouther({realHeight , realWidth}) {
                                 fill="#353535" style={{mixBlendMode: "overlay"}}/>
                             <circle cx="661.82" cy="907.34" r="5.93" fill="#aaa" style={{mixBlendMode: "overlay"}}/>
                             <circle cx="716.75" cy="907.34" r="5.93" fill="#aaa" style={{mixBlendMode: "overlay"}}/>
-                        </motion.g>
+                        </g>
                         <motion.g id={"left-car-in-accident"}
                                   animate={{
                                       x: '0px'
                                   }}
                                   transition={{
-                                      type: 'spring',
-                                      delay: 1,
+                                      type : 'spring',
                                       stiffness: 60,
+                                      repeat: Infinity,
+                                      repeatType : 'loop',
+                                      repeatDelay: 5,
                                       default: {
+                                          repeat : Infinity,
+                                          repeatDelay : 5,
                                           duration: 3,
                                       }
                                       // dum
@@ -3907,20 +3916,25 @@ export default function BackgroundGlouther({realHeight , realWidth}) {
                               animate={{
                                   // y : ['-30px' , '-25px' , '-30px' , '-20px'],
                                   y: "-30px",
-                                  opacity: 1,
+                                  opacity: [0,1],
                                   scale: [1.2, 1, 1.1, 0.9, 1.2, 1, 0.6, 1.1]
                               }}
                               transition={{
-                                  type: 'spring',
-                                  delay: 3.5,
+                                  type : 'spring',
                                   stiffness: 60,
-                                  dumping: 10,
-                                  // default : {
-                                  //     duration : 0.5,
-                                  // }
-                                  // dum
+                                  repeat: Infinity,
+                                  repeatType : 'loop',
+                                  delay : 5,
+                                  repeatDelay: 4,
+                                  default: {
+                                      delay : 5,
+                                      repeat : Infinity,
+                                      repeatDelay : 4,
+                                      duration: 1,
+                                  }
                               }}
                               initial={{
+                                  animationDelay : 5,
                                   opacity: 0,
                                   y: '5px'
                               }}
@@ -4666,7 +4680,7 @@ export default function BackgroundGlouther({realHeight , realWidth}) {
                     </g>
                     <motion.g
                         animate={{
-                            rotateY: ['0deg', '360deg' , "0deg"]
+                            rotateY: ['0deg', '360deg', "0deg"]
                         }}
                         transition={{
                             type: "spring",

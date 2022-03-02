@@ -25,7 +25,7 @@ export default function AnimationSlider({isAnim, setAnim}) {
 
     const theme = {
         mainSlider: {
-            width: width ? width+"px" : '100vw',
+            width: width ? width + "px" : '100vw',
             height: height,
             // left: x - 150,
             // top: y - 150,
@@ -57,19 +57,19 @@ export default function AnimationSlider({isAnim, setAnim}) {
     return (
         <ThemeProvider theme={theme}>
             <Body
-                animate={{
-                    // y: state.pageActive === 0 ? 0 : 400,
-                    opacity: state.pageActive === 0 ? 1 : 0,
-                    zIndex: state.pageActive === 0 ? 9 : -1
-                }}
-                transition={{
-                    type: 'spring',
-                    stiffness: 60
-                }}
-                initial={{
-opacity : 0
-                    // y: state.pageActive === 0 ? 400 : 0
-                }}
+                // animate={{
+                //     // y: state.pageActive === 0 ? 0 : 400,
+                //     opacity: state.pageActive === 0 ? 1 : 0,
+                //     zIndex: state.pageActive === 0 ? 9 : -1
+                // }}
+                // transition={{
+                //     type: 'spring',
+                //     stiffness: 60
+                // }}
+                // initial={{
+                //     opacity: 0
+                //     // y: state.pageActive === 0 ? 400 : 0
+                // }}
             >
                 <div id={"main-background-this"}>
                     <BackgroundGlouther/>
@@ -80,9 +80,15 @@ opacity : 0
                 </div>
 
 
-
                 <LeftHalf>
-                    <Forground/>
+                    <div id={"main-forground-this"}>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
+                    </div>
+
                 </LeftHalf>
 
             </Body>

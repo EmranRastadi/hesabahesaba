@@ -6,7 +6,8 @@ const Main = styled.div`
     height: 100vh;
     top: 0px;
     left: 0px;
-    position: fixed;
+    position: relative;
+    float: right;
     background: rgba( 0 0 0 / 80%);
     transform: none;
     opacity: 1;
