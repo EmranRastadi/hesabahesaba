@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import { scroller } from 'react-scroll';
-import { FcAdvertising, FcCustomerSupport, FcShop, FiSend } from 'react-icons/all';
+// import { FcAdvertising, FcCustomerSupport, FcShop } from 'react-icons/all';
 
 export default function Menu() {
   const el = useRef();
@@ -66,7 +66,7 @@ export default function Menu() {
           },
         }}
         className={'menu-item SolutionsMenu'}>
-        <FcAdvertising size={"25px"} />
+        {/*<FcAdvertising  />*/}
       </motion.div>
       <motion.div
         whileHover={{
@@ -104,7 +104,7 @@ export default function Menu() {
           },
         }}
         className={'menu-item Customers'}>
-        <FcShop size={"25px"} />
+        {/*<FcShop  />*/}
       </motion.div>
       <motion.div
         onClick={() => scrollToDown( 'contact-us' )}
@@ -126,7 +126,7 @@ export default function Menu() {
           },
         }}
         className={'menu-item ContactUs'}>
-        <FcCustomerSupport size={"25px"} />
+        {/*<FcCustomerSupport  />*/}
       </motion.div>
     </Container>
   );

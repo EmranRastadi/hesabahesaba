@@ -74,7 +74,7 @@ export default function MyIssue() {
                         />
           </Grid>
 
-          <Grid item md={6} xs={12} style={{ padding: 10 }}>
+          <Grid item md={6} style={{ padding: 10 }}>
             <Stack direction="row" alignItems="center" spacing={2}>
               <label htmlFor="contained-button-file">
                 <Input accept="image/*" id="contained-button-file" multiple type="file"/>
@@ -84,7 +84,7 @@ export default function MyIssue() {
               </label>
             </Stack>
           </Grid>
-          <Grid item md={6} xs={12} style={{ padding: 10 }}>
+          <Grid item md={6} style={{ padding: 10 }}>
             <Button variant="contained" style={{ float: 'left' }}>ارسال فرم</Button>
           </Grid>
         </Grid>
