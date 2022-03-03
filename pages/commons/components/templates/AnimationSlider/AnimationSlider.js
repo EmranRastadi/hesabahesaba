@@ -5,6 +5,8 @@ import {
     MainContainerSqure,
     LeftHalf,
 } from './style';
+import { scroller } from "react-scroll";
+
 import {
     useWindowDimensions,
 } from '../../../services/hooks/hook';
@@ -13,8 +15,10 @@ import {MainContextStore} from "../../../services/contexts/MainContext";
 import BackgroundGlouther from "./BackgroundGlouther";
 import {motion} from 'framer-motion'
 import Forground from "./Forground";
+import { Logo } from '../../molecules';
+import { AbsoluteLogo, BilBilak } from '../../atoms';
 
-export default function AnimationSlider({isAnim, setAnim}) {
+export default function AnimationSlider() {
     const {height, width} = useWindowDimensions();
     const {state, dispatch} = useContext(MainContextStore)
     const [arrSplash, setArrSplash] = useState([])
@@ -25,7 +29,7 @@ export default function AnimationSlider({isAnim, setAnim}) {
 
     const theme = {
         mainSlider: {
-            width: width ? width+"px" : '100vw',
+            width: width ? width + "px" : '100vw',
             height: height,
             // left: x - 150,
             // top: y - 150,
@@ -53,24 +57,18 @@ export default function AnimationSlider({isAnim, setAnim}) {
         setArrSplash(splashClone)
     }
 
+    function scrollToDown(){
+        scroller.scrollTo("industry", {
+            duration: 800,
+            delay: 0,
+            smooth: "easeInOutQuart",
+        });
+    }
 
     return (
         <ThemeProvider theme={theme}>
-            <Body
-                animate={{
-                    // y: state.pageActive === 0 ? 0 : 400,
-                    opacity: state.pageActive === 0 ? 1 : 0,
-                    zIndex: state.pageActive === 0 ? 9 : -1
-                }}
-                transition={{
-                    type: 'spring',
-                    stiffness: 60
-                }}
-                initial={{
-opacity : 0
-                    // y: state.pageActive === 0 ? 400 : 0
-                }}
-            >
+            <Body id={"slider"}>
+                <AbsoluteLogo />
                 <div id={"main-background-this"}>
                     <BackgroundGlouther/>
                     <BackgroundGlouther/>
@@ -80,10 +78,19 @@ opacity : 0
                 </div>
 
 
-
                 <LeftHalf>
-                    <Forground/>
+                    <div id={"main-forground-this"}>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
+                    </div>
+
                 </LeftHalf>
+
+
+                <BilBilak onClick={scrollToDown} />
 
             </Body>
 
