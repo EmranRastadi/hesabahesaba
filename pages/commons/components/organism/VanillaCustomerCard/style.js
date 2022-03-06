@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 const CardContainer = styled.div`
   .boxter{
-    width: 200px;
-    height: 260px;
+    width: 180px;
+    height: 200px;
     box-shadow: 20px 20px 50px rgba(0 0 0 / 50%);
     border-radius: 5px;
     background: rgba(255 255 255 , 10%);
     overflow: hidden;
     display: flex;
-    margin-top: 40px;
+    margin-top: 100px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -22,9 +22,9 @@ const CardContainer = styled.div`
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 200px;
+      height: 150px;
       img{
-        transform: scale(0.7);
+        transform: scale(0.5);
       }
     }
   }

@@ -6,12 +6,11 @@ import { Menu } from '../../molecules';
 export default function Luncher(){
   return (
     <Container>
-      <Navbar />
+      {/*<Navbar />*/}
       <AnimationSlider />
       <Industry />
       <MyCustomer/>
       <MyIssue/>
-
       <Menu/>
     </Container>
   )

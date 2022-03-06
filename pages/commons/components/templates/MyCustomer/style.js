@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const Main = styled.div`
-  background-image: url(${props => props?.theme?.customer?.src?.src}) ;
-  height: 400px;
+  background-image: url(${props => props?.theme?.customer?.src?.src});
+  height: 450px;
   float: right;
   position: relative;
   width: 100vw;
@@ -12,15 +12,16 @@ const Main = styled.div`
   background-repeat: unset;
   background-position: bottom;
 
-  .hilight{
+  .hilight {
     position: absolute;
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
-    background-color: rgba(0 0 0 / 20%);
+    background-color: rgba(0 0 0 / 40%);
 
   }
+
   .luncher {
     width: 100%;
     height: 100vh;
@@ -38,6 +39,9 @@ const Main = styled.div`
     justify-content: center;
   }
 
+  h1 {
+    background: linear-gradient(to right, transparent, black, transparent);
+  }
 
   .animationContainer {
     width: 100%;
@@ -70,5 +74,5 @@ const Main = styled.div`
 
 
 export {
-  Main,
+    Main,
 };

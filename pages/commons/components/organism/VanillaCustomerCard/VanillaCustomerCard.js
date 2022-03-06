@@ -29,7 +29,7 @@ export default function VanillaCustomerCard({src, title, description}) {
 
                 </div>
                 <Typography textAlign={"center"} height={'30px'} width={"100%"} fontWeight={"bolder"} color={"#fff"} fontSize={"16px"} fontFamily={"iran-sans"}>{title}</Typography>
-                <Typography textAlign={"center"} height={'30px'} width={"100%"} fontWeight={"300"} color={"#868686"} fontSize={"13px"} fontFamily={"iran-sans"}>{description}</Typography>
+                {/*<Typography textAlign={"center"} height={'30px'} width={"100%"} fontWeight={"300"} color={"#868686"} fontSize={"13px"} fontFamily={"iran-sans"}>{description}</Typography>*/}
             </Tilt>
         </CardContainer>
     )

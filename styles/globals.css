@@ -79,7 +79,8 @@ textarea {
 }
 
 textarea::placeholder {
-    color: #ccc;
+    color: #69696c;
+    font-size: 16px;
 }
 
 button {
@@ -97,6 +98,10 @@ input#contained-button-file {
 textarea:focus {
     transition: 0.05s;
     border : 2px solid #f25461;
+}
+input:focus {
+    transition: 0.05s;
+    border : 2px solid #f25461 !important;
 }
 
 textarea:hover {
