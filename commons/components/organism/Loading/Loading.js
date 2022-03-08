@@ -17,7 +17,7 @@ export default function Loading(props) {
                         borderRadius: "100%"
                     }}
                     transition={{
-                        delay: 3,
+                        delay: 1,
                         type: 'spring',
                         stiffness: 60,
                         duration: 1.5
@@ -57,7 +57,7 @@ export default function Loading(props) {
                         borderRadius: "100%"
                     }}
                     transition={{
-                        delay: 3,
+                        delay: 1,
                         type: 'spring',
                         stiffness: 60,
                         duration: 1.5

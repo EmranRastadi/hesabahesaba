@@ -17,6 +17,7 @@ import {motion} from 'framer-motion'
 import Forground from "./Forground";
 import { Logo } from '../../molecules';
 import { AbsoluteLogo, BilBilak } from '../../atoms';
+import {Loading} from "../../organism";
 
 export default function AnimationSlider() {
     const {height, width} = useWindowDimensions();
@@ -68,8 +69,18 @@ export default function AnimationSlider() {
     return (
         <ThemeProvider theme={theme}>
             <Body id={"slider"}>
+                {/*<Loading />*/}
+
                 <AbsoluteLogo />
                 <div id={"main-background-this"}>
+                    <BackgroundGlouther/>
+                    <BackgroundGlouther/>
+                    <BackgroundGlouther/>
+                    <BackgroundGlouther/>
+                    <BackgroundGlouther/>
+                    <BackgroundGlouther/>
+                    <BackgroundGlouther/>
+                    <BackgroundGlouther/>
                     <BackgroundGlouther/>
                     <BackgroundGlouther/>
                     <BackgroundGlouther/>
@@ -80,6 +91,14 @@ export default function AnimationSlider() {
 
                 <LeftHalf>
                     <div id={"main-forground-this"}>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
+                        <Forground/>
                         <Forground/>
                         <Forground/>
                         <Forground/>

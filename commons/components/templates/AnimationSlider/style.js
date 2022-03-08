@@ -380,12 +380,12 @@ const Body = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    -webkit-animation: backgrounMotion 400s linear infinite;
-    -moz-animation: backgrounMotion 400s linear infinite;
-    -ms-animation: backgrounMotion 400s linear infinite;
-    -o-animation: backgrounMotion 400s linear infinite;
+    -webkit-animation: backgrounMotion 600s linear infinite;
+    -moz-animation: backgrounMotion 600s linear infinite;
+    -ms-animation: backgrounMotion 600s linear infinite;
+    -o-animation: backgrounMotion 600s linear infinite;
     float: left;
-    animation: backgrounMotion 400s linear infinite;
+    animation: backgrounMotion 600s linear infinite;
     @-webkit-keyframes backgrounMotion {
       from {
         -ms-transform: translateX(50000px);
@@ -876,12 +876,12 @@ const LeftHalf = styled.div`
     position: fixed;
     left: 0px;
     top: 0px;
-    -webkit-animation: backgrounMotion 400s linear infinite;
-    -moz-animation: backgrounMotion 400s linear infinite;
-    -ms-animation: backgrounMotion 400s linear infinite;
-    -o-animation: backgrounMotion 400s linear infinite;
+    -webkit-animation: backgrounMotion 600s linear infinite;
+    -moz-animation: backgrounMotion 600s linear infinite;
+    -ms-animation: backgrounMotion 600s linear infinite;
+    -o-animation: backgrounMotion 600s linear infinite;
     float: left;
-    animation: backgrounMotion 400s linear infinite;
+    animation: backgrounMotion 600s linear infinite;
     @-webkit-keyframes backgrounMotion {
       from {
         -ms-transform: translateX(50000px);

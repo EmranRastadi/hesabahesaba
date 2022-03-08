@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { AnimationSlider, MyCustomer, MyIssue } from './commons/components/templates';
-import { MainContextProvider } from './commons/services/contexts/MainContext';
-import GroupHandlerButton from './commons/components/molecules/GroupHandlerButton/GroupHandlerButton';
-import { LogoMotion, Menu } from './commons/components/molecules';
+import { AnimationSlider, MyCustomer, MyIssue } from '../commons/components/templates';
+import { MainContextProvider } from '../commons/services/contexts/MainContext';
+import GroupHandlerButton from '../commons/components/molecules/GroupHandlerButton/GroupHandlerButton';
+import { LogoMotion, Menu } from '../commons/components/molecules';
 import { create } from 'jss';
 import rtl from 'jss-rtl';
 import { StylesProvider, jssPreset } from '@mui/styles';
@@ -13,9 +13,9 @@ import rtlPlugin from 'stylis-plugin-rtl';
 import { prefixer } from 'stylis';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
-import { Loading, Navbar } from './commons/components/organism';
-import NavBar from './commons/components/organism/NavBar/NavBar';
-import { Luncher } from './commons/components/Pages';
+import { Loading, Navbar } from '../commons/components/organism';
+import NavBar from '../commons/components/organism/NavBar/NavBar';
+import { Luncher } from '../commons/components/Pages';
 
 const theme = createTheme( {
   direction: 'rtl', // Both here and <body dir="rtl">
