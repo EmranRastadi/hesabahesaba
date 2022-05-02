@@ -1,21 +1,15 @@
-import { useEffect, useState } from 'react';
-import { AnimationSlider, MyCustomer, MyIssue } from './commons/components/templates';
-import { MainContextProvider } from './commons/services/contexts/MainContext';
-import GroupHandlerButton from './commons/components/molecules/GroupHandlerButton/GroupHandlerButton';
-import { LogoMotion, Menu } from './commons/components/molecules';
+import {  useState } from 'react';
+import { MainContextProvider } from '../commons/services/contexts/MainContext';
 import { create } from 'jss';
 import rtl from 'jss-rtl';
-import { StylesProvider, jssPreset } from '@mui/styles';
+import {  jssPreset } from '@mui/styles';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import TextField from '@mui/material/TextField';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { prefixer } from 'stylis';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
-import { Loading, Navbar } from './commons/components/organism';
-import NavBar from './commons/components/organism/NavBar/NavBar';
-import { Luncher } from './commons/components/Pages';
+import { Luncher } from '../commons/components/DesingPages';
 
 const theme = createTheme( {
   direction: 'rtl', // Both here and <body dir="rtl">
@@ -46,13 +40,8 @@ export default function Home() {
       <ThemeProvider theme={theme}>
         <div dir="rtl">
           <MainContextProvider>
-            {/*<Loading />*/}
-            {/*<LogoMotion/>*/}
-            {/*<GroupHandlerButton/>*/}
             <Luncher />
           </MainContextProvider>
-
-
         </div>
       </ThemeProvider>
     </CacheProvider>
