@@ -11,10 +11,24 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   z-index: 9999999999;
+  //display: none;
 
   &.deactivate {
     display: none !important;
   }
+
+
+  @keyframes showWithDelay {
+    0% {
+      display: none;
+      //transform: rotate(0deg);
+    }
+    100% {
+      display: flex;
+      //transform: rotate(-360deg);
+    }
+  }
+  
 `;
 
 const Main = styled.div`
@@ -104,6 +118,7 @@ const Main = styled.div`
       position: absolute;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
+      animation-delay: 0.3s;
 
       &:nth-child(1) {
         animation-delay: 3.2s;
@@ -176,6 +191,8 @@ const Main = styled.div`
       &:nth-child(18) {
         animation-delay: 6.6s;
       }
+
+   
     }
 
     @keyframes animateCirRo {
